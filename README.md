@@ -1,53 +1,53 @@
-# Lab3: Ski Jump
+## In Class Activity: Phone Bill
 
-	
+
+Due: Thursday
+
 ## Problem: 
-Winter is coming! One winter sport is the ski jump, where the score is determined by the distance traveled after skiing down a ramp and into the air. What type of speed does a ski jumper need to achieve on the ramp to make a good distance on their jump?  Let’s make a program to calculate the distance traveled based on speed and determine how many points they’d receive if they went that distance.
-[See an image of ski jump](https://i0.wp.com/i.ytimg.com/vi/nIH01DgMOnI/maxresdefault.jpg) and [up coming competitions](https://www.fis-ski.com/DB/alpine-skiing/calendar-results.html?categorycode=WC&disciplinecode=&eventselection=&gendercode=&nationcode=&place=&racecodex=&racedate=&saveselection=-1&seasoncode=2022&seasonmonth=X-2022&seasonselection=&sectorcode=AL).
+Write a program to determine how much a customer owes their mobile phone provider based on their subscription package and amount of data used.
 
 ## Purpose: 
 This lab gives you practice with:
-* Using the math module  
-* Using decision making in your code  
-* Follow usability rules for your input and output  
-* Drawing a flowchart & finding control paths  
+* Decision making
+* Writing your own algorithm before coding
 
 ## Details:
-Given the type of ski jump (normal vs. large) and the jumper’s speed at the end of the ramp, predict how far they will jump using the simplification in the table below. Then output their number of points earned.
+The mobile phone provider has three different subscription packages for its customers:  
 
-|Hill Type	| Height	| Points per meter	| Par (distance)|
-|-----------|-----------|-------------------|---------------|
-| Normal	| 46	    | 2	                | 90            |
-| Large	    | 70	    | 1.8	            | 120           |
+* **Package Green:** For $49.99/month, 2GB of data is provided. Additional GB are $15/GB.  Check if the customer has a coupon. The coupon takes $20 off a bill of $75 or more.  
+* **Package Blue:** For $70/month, 4GB of data is provided. Additional GB are $10/GB.
+* **Package Purple:** For $99.95/month, unlimited data is provided.
 
-To simplify the calculation, the time in the air is calculated as **sqrt((2*height)/9.8)** . The distance traveled is the `jumper’s speed * time in the air`.
+Your goal is to tell the customer how much they owe for their monthly bill based on their package, and how much data they used.  Be sure to include the monthly special that only applies to users with a Green package, if they have a coupon. There is no rollover of unused data from month to month in any package.
 
-After determining their distance, calculate how many points they would get on the chosen hill. Their points depend on whether or not their distance is above par (good) or below or equal to par (bad). Calculate the points earned as `60 + (distance - par)*points_per_meter`.
+If the user inputs an invalid package name, tell them that it was invalid and do not give them a bill amount or do any calculations. 
 
-Tell the jumper "Great job for doing better than par!" when their points are at least 61, "What happened??" if their points are less than 10, or “Sorry you didn’t go very far” otherwise. Don’t forget to output their distance and points so they know how well they did! 
+## Program Requirements:
+When you plan your solution, you must take the following into account:  
+
+1. You may only have one print statement concerning cost
+2. You must use at least one logical boolean operator (and/or/not) [ Remember, you're in Java now, not python]
+3. Use a boolean variable to help you determine validity of the package. Think about how you then use it later.
+4. Use the **decimalformat** formatting approach so that the final amount due only goes to 2 decimal places. Look up how this works if you aren't sure.
+5. Your program MUST work no matter what case the user types the package as (i.e. gREEn should count as the green package). Find the java equivalent of what you did in Python.
 
 ## Steps:
-1. Understand the problem you are trying to solve. Do you understand the input, desired output, and when a decision needs to be made?
-2. Write your algorithm in algorithm.txt to solve this entire problem. Remember to write decisions correctly – refer to your notes as necessary. This is likely the hardest step of the lab -- be careful about the order of steps so that you aren't doing the same thing more times than necessary. The lab instructor must approve your algorithm before you code. 
-3. Write your code in main.py. Recall that you can compare strings like "normal" and "large" for equality in the same way you can compare numerical types.
-4. Make sure you follow the guidelines for well-formatted and readable code with comments.
-5. Make sure you add the intro comments.
-6. Draw a flowchart of your code on paper.
-7. Label the control paths in your flowchart.
-8. List the test cases based on your control paths in testcases.xlsx, using boundary values.
-9. Use the test cases to make sure your program works correctly, and fix it if it doesn’t. Don’t just assume you did it right, there are many things that could have gone wrong. Test EVERY control path. You may find it helpful to test with additional inputs as well if you didn’t pick various special cases for your input values.
+1. Understand the problem
+2. Write an algorithm showing the steps the program will go through to solve this problem (algorithm.txt)
+3. Test that your algorithm works by walking through it with example input, and double checking that you've covered all requirements above. **You must show your algorithm to the instructor before you can start coding.**
+4. Write your code following your algorithm and using good usability principles in main.py. 
+5. Properly comment your code with intro comments and line comments
+7. Create a list of test cases in testcases.xlsx by listing the input boundary values that will allow you to test each path. You must write an equation in excel using the input values in your test cases to calculate what the correct cost should be for each test case's cost output.  
+8. Test your code to make sure it works correctly.
 
-## Reminder of Intro Comments Style
+## Submit:
+1. To Github:
+    1. Your Java file
+    2. Your algorithm (algorithm.txt)
+    3. Your test cases based on your flowchart (test_cases.txt)
+       - Test your test cases in Excel, make sure that they work. 
 
-  ```
-  # Programmers:  
-  # Course:  
-  # Due Date: 
-  # Lab Assignment: 
-  # Problem Statement:  
-  # Data In:
-  # Data Out:  
-  # Credits: 
-  ```
+   
+
 
 
